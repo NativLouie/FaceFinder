@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-import Navigation from '../components/Navigation/Navigation'
-import { Logo, ImageForm, Rank, FaceRecognition, SignIn, Register } from '../components'
+import { Navigation, Logo, ImageForm, Rank, FaceRecognition, SignIn, Register } from '../components'
 import * as util from '../Util'
 import './Home.css';
 
 
 export default class Home extends Component {
 
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       userInput: '',
       imageUrl: '',

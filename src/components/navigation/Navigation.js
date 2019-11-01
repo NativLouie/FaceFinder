@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Navigation = (props) => {
+export const Navigation = (props) => {
 	if (props.isSignedIn) {
 		return (
 			<nav style={ { display: 'flex', justifyContent: 'flex-end', } } >
@@ -19,5 +19,3 @@ const Navigation = (props) => {
 
 	}
 }
-
-export default Navigation
