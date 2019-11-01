@@ -1,6 +1,6 @@
 export * from './Register'
 export * from './SignIn'
-export * from './Navigation'
+export * from '../../../facefinder-API/Navigation'
 export * from './Logo'
 export * from './ImageForm'
 export * from './Rank'
