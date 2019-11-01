@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-import { Navigation, Logo, ImageForm, Rank, FaceRecognition, SignIn, Register } from '../components'
+import Navigation from '../components/Navigation/Navigation'
+import { Logo, ImageForm, Rank, FaceRecognition, SignIn, Register } from '../components'
 import * as util from '../Util'
 import './Home.css';
 
