@@ -4,7 +4,7 @@ import Clarifai from 'clarifai';
 
 
 
-const apiKey = '75817d8fc4c44b49aba96dfc171bbc9c';
+const apiKey = '2448c264c1db4d97a77774e2f87b75c6';
 const particlesConfig = {
 	"particles": {
 		"number": {
@@ -24,5 +24,7 @@ const app = new Clarifai.App({
 
 export const config = {
 	particlesConfig,
-	app
+	app,
+	Clarifai
+
 }

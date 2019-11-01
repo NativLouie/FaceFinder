@@ -3,14 +3,14 @@ import React from 'react'
 
 
 
-export const Rank = () => {
+export const Rank = ({ name, entries }) => {
 	return (
 		<div>
 			<div className='white f3'>
-				{ `Buchi, your current rank is... ` }
+				{ `${ name }, You have checked ` }
 			</div>
 			<div className='white f1'>
-				{ `#5` }
+				{ `${ entries } photos` }
 			</div>
 
 		</div>
