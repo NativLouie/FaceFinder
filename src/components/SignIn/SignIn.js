@@ -7,7 +7,8 @@ export default class Signin extends React.Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      error: ''
     }
   }
 
@@ -26,7 +27,7 @@ export default class Signin extends React.Component {
 
 
 
-    fetch('http://localhost:3001/signin', {
+    fetch('https://radiant-shelf-74628.herokuapp.com/signin', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -36,9 +37,17 @@ export default class Signin extends React.Component {
     })
       .then(response => response.json())
       .then(user => {
+        console.log(user, 'user')
         if (user.id) {
           loadUser(user)
           onRouteChange('home');
+          this.setState({
+            error: ''
+          })
+        } else {
+          this.setState({
+            error: 'Email/Password is incorrect'
+          })
         }
       })
   }
@@ -46,6 +55,7 @@ export default class Signin extends React.Component {
 
   render () {
     const { onRouteChange } = this.props;
+    const { error } = this.state
 
     return (
       <article className="br3 ba b--black-10 mv4 w-200 w-100-m w-25-l mw6 shadow-5 center">
@@ -77,6 +87,9 @@ export default class Signin extends React.Component {
                 />
               </div>
             </fieldset>
+            <div className="mv3">
+              <p style={ { color: 'red', fontSize: '9px' } }>{ error }</p>
+            </div>
 
 
             <div className="">
