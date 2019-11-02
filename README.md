@@ -1,3 +1,6 @@
+
+![facefinder Demo](demo/ScreenRecording2019-11-01at81317.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
